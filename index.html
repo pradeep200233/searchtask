@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #md{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 50px;
+         } 
+    </style>
+</head>
+<body>
+    <input type="search" >
+    <button onclick="demo()">click </button>
+    <div id="md"></div>
+    <script>
+        let arr=[{
+            id: 1,
+          mobile: "samsung",
+          price: 25000,
+          category: "mobiles",
+          image: "https://img.etimg.com/photo/msid-98945112,imgsize-13860/SamsungGalaxyS23Ultra.jpg",
+        },
+    {
+        id: 2,
+          mobile: "samsung",
+          price: 27000,
+          category: "mobiles",
+          image: "https://images.samsung.com/is/image/samsung/p6pim/levant/2401/gallery/levant-galaxy-s24-s928-sm-s928bztqmea-thumb-539425998?$264_264_PNG$",
+    },
+    {
+        id: 3,
+          mobile: "samsung",
+          price: 32000,
+          category: "mobiles",
+          image: "https://images.samsung.com/is/image/samsung/levant-galaxy-note10-plus-n975-sm-n975fzsdmid-backauraglow-thumb-182079707?$344_344_PNG$",
+    },
+    {
+        id: 4,
+          mobile: "redmi",
+          price: 17000,
+          category: "mobiles",
+          image: "https://i03.appmifile.com/98_item_in/04/01/2024/1fcfdf47573677eee94bab44e38b7734.jpg",
+    },
+{
+    id: 5,
+          mobile: "redmi",
+          price: 15000,
+          category: "mobiles",
+          image: "https://www.jiomart.com/images/product/original/493666112/redmi-note-12-64-gb-6-gb-ram-ice-blue-mobile-phone-digital-o493666112-p600221434-0-202304061510.jpeg?im=Resize=(420,420)",
+},
+{
+    id: 6,
+          mobile: "redmi",
+          price: 19000,
+          category: "mobiles",
+          image: "https://i03.appmifile.com/676_item_in/05/12/2023/70a7d19fdf39eebbe9b0172387fb4353.jpg",
+},
+{
+    id: 7,
+          mobile: "nokia",
+          price: 12000,
+          category: "mobiles",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoWFDo_Hw6WeJYZ-mIPd6Iu32a3E-cM1d1sA&s",
+},
+{
+    id: 8,
+          mobile: "nokia",
+          price: 9000,
+          category: "mobiles",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQIbVDEKdVMs89T35td1BWVjSBAVefNZrg0TovQF6rjkvZWSa8P1l8WfVcEaZvlLViysQ&usqp=CAU",
+},
+{
+    id: 9,
+          mobile: "nokia",
+          price: 11000,
+          category: "mobiles",
+          image: "https://img.gkbcdn.com/s3/p/2019-03-07/nokia-9-pureview-5-99-inch-6gb-128gb-smartphone-blue-1571988977587.jpg",
+}]
+let md=document.getElementById("md")
+count=0
+function demo(){
+    let div=document.createElement("div");
+            md.appendChild(div);
+            div.style.height="300px";
+            div.style.border="2px solid ";
+            div.style.border="none"
+            div.style.width="250px";
+            div.style.padding="20px";
+            div.style.backgroundColor="green"
+            
+            div.style.boxShadow="2px 2px 10px"
+    
+    let img=document.createElement("img");
+            div.appendChild(img);
+            img.setAttribute("src",arr[count].image);
+            img.style.width="100%";
+            img.style.height="50%";
+
+            let p1=document.createElement("p");
+            div.appendChild(p1);
+            p1.innerHTML="<b>Title : </b>"+arr[count].title;
+            p1.style.fontSize="13px";
+            p1.style.padding="5px";
+            p1.style.color="orange"
+
+            let p2=document.createElement("p");
+            div.appendChild(p2);
+            p2.innerHTML="<b>Price : </b>"+arr[count].price;
+            p2.style.fontSize="13px";
+            p2.style.padding="5px";
+            p2.style.color="white"
+
+
+            count++
+            if(count>9){
+             alert("No More Products")
+            }
+}
+            
+           
+    </script>
+</body>
+</html>
